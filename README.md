@@ -1,51 +1,109 @@
-# NimbusHR RevOps Dashboard (Portfolio Project)
+# NimbusHR RevOps Dashboard & Churn Prediction
 
-**Owner:** Roman Licursi  
-**Stack:** SQL (SQLite), Python (pandas, scikit-learn), Tableau
+An end-to-end Revenue Operations (RevOps) analytics project simulating a 
+SaaS company's sales funnel, churn patterns, and revenue attribution.  
+Built to showcase SQL, Python, Tableau, and automation skills in a 
+real-world business context.
 
-## What this shows
-- End-to-end RevOps/GTM analytics on CRM + subscription data
-- KPIs: funnel conversion, CAC, churn, LTV, payback
-- Applied AI: simple churn-risk scoring integrated back into the dataset
+📄 **Case Study:** [View full project write-up](docs/case_study.md)
 
-## Project structure
-```
-/data
-  nimbushr_revops.db
-/sql
-  revops_queries.sql
-/python
-  churn_model.py
-/notebooks
-  (optional) exploratory notebooks
-/tableau
-  (placeholder for .twbx or link)
-/docs
-  case_study.md (export from Notion)
-```
+---
 
-## Quick start
-1) Open `/data/nimbushr_revops.db` with DB Browser for SQLite (or Python)  
-2) Run `/sql/revops_queries.sql` to compute core metrics  
-3) (Optional) Run churn model:
-```bash
-cd python
-python churn_model.py ../data/nimbushr_revops.db
-```
-This creates a table `subscriptions_scored` with a `churn_risk_score` (0–1).
+## 📌 Project Overview
+NimbusHR is a fictional B2B SaaS HR software provider.  
+This project models how a RevOps Analyst or GTM Analytics Engineer would:
+1. Consolidate data from CRM, subscription, and marketing sources.
+2. Build dashboards for sales/marketing performance.
+3. Predict churn risk for customer retention strategy.
 
-4) Connect Tableau to the SQLite DB and build:
-- Executive Overview (churn %, CAC, LTV, payback)
-- Funnel View (conversion by stage & source)
-- Churn Analysis (segments + risk score)
-- Revenue Attribution (source ROI & payback)
+---
 
-## Business framing (for case study)
-- Problem: High churn and unclear funnel performance limit revenue growth
-- Solution: Unified RevOps dashboard (SQL + Python + Tableau) with AI churn scoring
-- Results (modeled): Potential 15% churn reduction and 12% lift in MQL→SQL conversion
-- Impact: Prioritize at-risk cohorts and channels with fastest CAC payback
+## 🛠️ Tech Stack
+- **SQL** — data extraction, joins, aggregations
+- **Python** — pandas for prep, scikit-learn for churn prediction
+- **Tableau** — dashboarding & storytelling
+- **SQLite** — lightweight relational database for simulation
+- **Git/GitHub** — version control & project presentation
 
-## Notes
-- Data is synthetic but structured like real CRM/billing data.
-- Replace channel names, pricing, or segments as needed.
+---
+
+## 📊 Features & Deliverables
+
+### 1. Funnel & Revenue Dashboard
+- **Visualization:** Leads → MQL → SQL → Closed Won  
+- **KPIs:** Conversion rates, revenue by segment, deal velocity  
+- **SQL:** Aggregated CRM + marketing campaign data
+
+### 2. Churn Analysis
+- **Visualization:** Cohort retention chart in Tableau  
+- **SQL:** Joins subscription and churn tables to calculate churn rates  
+- **KPIs:**  
+  - Monthly churn rate  
+  - Lifetime Value (LTV)  
+  - Payback period  
+
+### 3. Churn Prediction (Python)
+A logistic regression model using:
+- **Inputs:** Contract type, tenure, monthly charges, support tickets  
+- **Output:** Probability of churn (0–1)  
+- **Tech:** pandas for cleaning and scikit-learn for modeling
+
+---
+
+## 📂 Project Structure
+nimbushr-revops-dashboard/  
+│  
+├── data/                  # Database & raw data  
+│   └── nimbushr_revops.db  
+│  
+├── sql/                   # SQL queries  
+│   └── revops_queries.sql  
+│  
+├── python/                # Python scripts  
+│   └── churn_model.py  
+│  
+├── docs/                  # Optional case studies, screenshots  
+│  
+└── README.md              # Project overview  
+
+---
+
+## 🚀 How to Run Locally
+
+**1️⃣ Clone the repo**  
+`git clone https://github.com/romanlicursi/nimbushr-revops-dashboard.git`  
+`cd nimbushr-revops-dashboard`  
+
+**2️⃣ Install Python dependencies**  
+`pip install pandas scikit-learn`  
+
+**3️⃣ Explore the SQL**  
+`sqlite3 data/nimbushr_revops.db`  
+`.read sql/revops_queries.sql`  
+
+**4️⃣ Run churn prediction**  
+`python python/churn_model.py`  
+
+---
+
+## 💡 Business Impact Framing
+If this were a real SaaS company:
+- **Retention Strategy:** Target high-risk customers from churn model with 
+retention campaigns.
+- **Marketing Efficiency:** Cut spend on low-ROI campaigns; double down on 
+high CAC payback.
+- **Revenue Growth:** Improve upsell targeting by combining churn risk + 
+usage metrics.
+
+---
+
+## 📸 Screenshots & Visuals
+*To be added after Tableau dashboard is published on Tableau Public.*
+
+---
+
+## 📬 Contact
+Built by **Roman Licursi** — 
+[LinkedIn](https://www.linkedin.com/in/romanlicursi) | 
+[GitHub](https://github.com/romanlicursi)
+
