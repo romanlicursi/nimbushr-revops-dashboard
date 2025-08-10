@@ -1,0 +1,15 @@
+# Model Drivers (Logistic Regression)
+
+Higher positive = higher churn risk; negative = lower churn risk.
+
+## Top signals by absolute impact
+```
+lead_source_Outbound SDR Outreach   -0.5579
+lead_source_Paid Search              0.3300
+tenure_months                       -0.2506
+payment_method_Credit Card           0.1291
+contract_type_Monthly                0.1291
+lead_source_Referral Program        -0.1141
+payment_method_PayPal                0.0248
+monthly_revenue                     -0.0003
+```
