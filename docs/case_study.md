@@ -76,7 +76,6 @@ If implemented at a real SaaS company, this workflow would:
 ## 8. Links & Assets
 - **Tableau Public Dashboard:** [NimbusHR RevOps Dashboard](https://public.tableau.com/views/RealNimbus/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))  
 - **GitHub Repository:** [NimbusHR RevOps Dashboard](https://github.com/romanlicursi/nimbushr-revops-dashboard)  
-- **Loom Walkthrough Video:** _(optional, to be added)_  
 
 ---
 
