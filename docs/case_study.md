@@ -79,7 +79,7 @@ source of truth.
 ---
 
 ## 8. Links & Assets
-- **Tableau Public Dashboard:** _[Link to be added]_  
+- **Tableau Public Dashboard:** _[NimbusHR RevOps Dashboard](https://public.tableau.com/views/RealNimbus/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)_  
 - **GitHub Repository:** [NimbusHR RevOps 
 Dashboard](https://github.com/romanlicursi/nimbushr-revops-dashboard)  
 - **Loom Walkthrough Video:** _[Link to be added]_  
