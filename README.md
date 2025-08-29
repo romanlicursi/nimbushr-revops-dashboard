@@ -1,109 +1,97 @@
 # NimbusHR RevOps Dashboard & Churn Prediction
 
-An end-to-end Revenue Operations (RevOps) analytics project simulating a 
-SaaS company's sales funnel, churn patterns, and revenue attribution.  
-Built to showcase SQL, Python, Tableau, and automation skills in a 
-real-world business context.
-
+📊 **Live Dashboard on Tableau Public:** [View Here](https://public.tableau.com/views/RealNimbus/Dashboard1?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)  
 📄 **Case Study:** [View full project write-up](docs/case_study.md)
 
 ---
 
 ## 📌 Project Overview
 NimbusHR is a fictional B2B SaaS HR software provider.  
-This project models how a RevOps Analyst or GTM Analytics Engineer would:
-1. Consolidate data from CRM, subscription, and marketing sources.
-2. Build dashboards for sales/marketing performance.
-3. Predict churn risk for customer retention strategy.
+This project simulates how a RevOps Analyst or GTM Analytics Engineer would combine **SQL, Python, and Tableau** to track funnel performance, customer acquisition efficiency, retention, and churn risk.
+
+---
+
+## 📊 Key Insights
+- **CAC per Customer:** Avg ≈ **$1,015**; Payback ≈ **3.3 months**  
+- **By Source:** Organic & Email efficient; LinkedIn costly + slow payback  
+- **Trend:** CAC spiked in **Aug (~$1.4k)** after mid-year surge; earlier months steady at ~$850–$920  
+- **Retention:** Early cohorts (Feb–Mar) retained >45% at 3 months; later cohorts <15% by 3 months and near 0% by 6 months  
+- **Churn Risk:** ~15% of customers flagged ≥60% churn probability. High-risk customers often show **low tenure + monthly/credit card contracts**  
 
 ---
 
 ## 🛠️ Tech Stack
-- **SQL** — data extraction, joins, aggregations
-- **Python** — pandas for prep, scikit-learn for churn prediction
-- **Tableau** — dashboarding & storytelling
-- **SQLite** — lightweight relational database for simulation
-- **Git/GitHub** — version control & project presentation
+- **SQL** → Funnel conversion, CAC by source, churn summaries, LTV, payback (`sql/revops_queries.sql`)  
+- **Python** → Logistic regression churn model (`python/churn_model.py`)  
+  - Outputs: `outputs/subscriptions_scored.csv`  
+  - Model drivers: `docs/model_coefficients.csv`, `docs/model_readout.md`  
+- **Tableau** → Interactive dashboard (Funnel, CAC, Payback, Retention, Churn Risk)  
+- **SQLite** → Lightweight relational DB (`data/nimbushr_revops.db`)  
+- **Git/GitHub** → Version control & portfolio presentation  
 
 ---
 
-## 📊 Features & Deliverables
-
-### 1. Funnel & Revenue Dashboard
-- **Visualization:** Leads → MQL → SQL → Closed Won  
-- **KPIs:** Conversion rates, revenue by segment, deal velocity  
-- **SQL:** Aggregated CRM + marketing campaign data
-
-### 2. Churn Analysis
-- **Visualization:** Cohort retention chart in Tableau  
-- **SQL:** Joins subscription and churn tables to calculate churn rates  
-- **KPIs:**  
-  - Monthly churn rate  
-  - Lifetime Value (LTV)  
-  - Payback period  
-
-### 3. Churn Prediction (Python)
-A logistic regression model using:
-- **Inputs:** Contract type, tenure, monthly charges, support tickets  
-- **Output:** Probability of churn (0–1)  
-- **Tech:** pandas for cleaning and scikit-learn for modeling
-
----
-
-## 📂 Project Structure
-nimbushr-revops-dashboard/  
-│  
-├── data/                  # Database & raw data  
-│   └── nimbushr_revops.db  
-│  
-├── sql/                   # SQL queries  
-│   └── revops_queries.sql  
-│  
-├── python/                # Python scripts  
-│   └── churn_model.py  
-│  
-├── docs/                  # Optional case studies, screenshots  
-│  
-└── README.md              # Project overview  
+## 📂 Repository Structure
+```
+nimbushr-revops-dashboard/
+├── data/          # SQLite DB + raw CSVs
+├── sql/           # SQL queries
+├── python/        # Churn model script
+├── outputs/       # Model outputs (subscriptions_scored.csv)
+├── docs/          # Case study, drivers, screenshots
+├── dashboard/     # Tableau packaged workbook (.twbx)
+└── README.md
+```
 
 ---
 
 ## 🚀 How to Run Locally
 
-**1️⃣ Clone the repo**  
-`git clone https://github.com/romanlicursi/nimbushr-revops-dashboard.git`  
-`cd nimbushr-revops-dashboard`  
+```bash
+# 1. Clone
+git clone https://github.com/romanlicursi/nimbushr-revops-dashboard.git
+cd nimbushr-revops-dashboard
 
-**2️⃣ Install Python dependencies**  
-`pip install pandas scikit-learn`  
+# 2. Install Python deps
+pip install -r requirements.txt
 
-**3️⃣ Explore the SQL**  
-`sqlite3 data/nimbushr_revops.db`  
-`.read sql/revops_queries.sql`  
+# 3. Explore SQL
+sqlite3 data/nimbushr_revops.db
+.read sql/revops_queries.sql
 
-**4️⃣ Run churn prediction**  
-`python python/churn_model.py`  
-
----
-
-## 💡 Business Impact Framing
-If this were a real SaaS company:
-- **Retention Strategy:** Target high-risk customers from churn model with 
-retention campaigns.
-- **Marketing Efficiency:** Cut spend on low-ROI campaigns; double down on 
-high CAC payback.
-- **Revenue Growth:** Improve upsell targeting by combining churn risk + 
-usage metrics.
+# 4. Run churn model
+python3 python/churn_model.py data/nimbushr_revops.db
+```
 
 ---
 
-## 📸 Screenshots & Visuals
-*To be added after Tableau dashboard is published on Tableau Public.*
+## 📈 Model Performance
+
+**Logistic Regression**
+- **AUC = X.XXX**
+- **Accuracy = X.XXX**  
+*(replace with your actual printout)*
+
+**Top churn drivers:**
+- Outbound SDR Outreach (–) and Tenure (–) → lower churn risk
+- Paid Search (+), Monthly Contracts (+), Credit Card (+) → higher churn risk
 
 ---
 
-## 📬 Contact
-Built by **Roman Licursi** — 
-[LinkedIn](https://www.linkedin.com/in/romanlicursi) | 
-[GitHub](https://github.com/romanlicursi)
+## 📸 Dashboard Preview
 
+*Interactive dashboard available on [Tableau Public](https://public.tableau.com/views/RealNimbus/Dashboard1?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)*
+
+---
+
+## 💡 Business Impact (Simulated)
+
+If implemented at a real SaaS company, this workflow would:
+- Improve funnel conversion visibility (MQL → SQL drop-offs)
+- Reallocate spend away from high-CAC, long payback channels (LinkedIn)
+- Prioritize retention campaigns for high-risk accounts flagged by the model
+- Provide exec team a single source of truth for GTM performance
+
+---
+
+👤 Built by Roman Licursi — [LinkedIn](www.linkedin.com/in/roman-licursi-3aab2a160) | [GitHub](https://github.com/romanlicursi)
