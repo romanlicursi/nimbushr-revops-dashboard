@@ -70,9 +70,8 @@ python3 python/churn_model.py data/nimbushr_revops.db
 ## 📈 Model Performance
 
 **Logistic Regression**
-- **AUC = X.XXX**
-- **Accuracy = X.XXX**  
-*(replace with your actual printout)*
+- **AUC = 0.793
+- **Accuracy = 0.794 
 
 **Top churn drivers:**
 - Outbound SDR Outreach (–) and Tenure (–) → lower churn risk
