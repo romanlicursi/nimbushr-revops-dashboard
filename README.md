@@ -3,6 +3,8 @@
 📊 **Live Dashboard on Tableau Public:** [View Here](https://public.tableau.com/views/RealNimbus/Dashboard1?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)  
 📄 **Case Study:** [View full project write-up](docs/case_study.md)
 
+🧠 Summary KPI: This dashboard analyzes funnel conversion, churn risk, CAC, and payback period for a fictional SaaS company. It identifies drop-off points and flags 15% of customers as high-churn risk based on a logistic regression model.
+
 ---
 
 ## 📌 Project Overview
