@@ -88,6 +88,6 @@ Dashboard](https://github.com/romanlicursi/nimbushr-revops-dashboard)
 
 ## 9. Author
 **Roman Licursi**  
-[LinkedIn](https://www.linkedin.com/in/romanlicursi) | 
+[LinkedIn](www.linkedin.com/in/roman-licursi-3aab2a160) | 
 [GitHub](https://github.com/romanlicursi)
 
